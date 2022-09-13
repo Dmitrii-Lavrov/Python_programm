@@ -108,11 +108,11 @@ def negativ_fib(data):
     Params: 
     data - список Фибонначи для положительных элементов
     '''
-    if len(data) % 2 != 0:
-        negativ_data = [- data[len(data)-1], data[len(data)-2]]
+    if len(data) % 2 != 0: # Формируем первые 2 элемента списка, для отрицательных индексов, в зависимости от четного или нечетного количества элементов. 
+        negativ_data = [- data[len(data)-1], data[len(data)-2]] 
     else:
         negativ_data = [data[len(data)-1], - data[len(data)-2]]
-    for i in range(2, 2*(len(data)-1)+1):
+    for i in range(2, 2*(len(data)-1)+1): # Формируем окончательный список
         negativ_data.append(negativ_data[i-1] + negativ_data[i-2] )
     return negativ_data
 print(negativ_fib(fib(N)))
