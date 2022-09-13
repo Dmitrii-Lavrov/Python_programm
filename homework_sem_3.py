@@ -101,7 +101,7 @@ def fib(N):
     for i in range(2, N+1):
         data.append(data[i-1] + data[i-2] )
     return data
-print(fib(N))
+
 def negativ_fib(data):
     '''
     Функция формирует список Фибонначи, в том числе из отрицательных элементов.
@@ -115,7 +115,7 @@ def negativ_fib(data):
     for i in range(2, 2*(len(data)-1)+1): # Формируем окончательный список
         negativ_data.append(negativ_data[i-1] + negativ_data[i-2] )
     return negativ_data
-print(negativ_fib(fib(N)))
+print(f"{N} -> {negativ_fib(fib(N))}")
 
 
 
